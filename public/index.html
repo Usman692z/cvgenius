@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVGenius - AI Resume Builder</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>CVGenius</h1>
+                <p>AI-Powered Resume Builder</p>
+            </div>
+            <div class="auth-buttons">
+                <button id="loginBtn" class="btn btn-secondary">Login</button>
+                <button id="signupBtn" class="btn btn-primary">Sign Up</button>
+            </div>
+        </header>
+
+        <main>
+            <section id="landing" class="landing">
+                <div class="landing-content">
+                    <h2>Build Your Perfect Resume</h2>
+                    <p>Create a professional resume in minutes with AI-powered suggestions</p>
+                    <div class="features">
+                        <div class="feature">
+                            <span class="feature-icon">✨</span>
+                            <h3>AI Suggestions</h3>
+                            <p>Get smart suggestions to improve your content</p>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">📄</span>
+                            <h3>Multiple Templates</h3>
+                            <p>Choose from professional resume templates</p>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">⚡</span>
+                            <h3>Quick & Easy</h3>
+                            <p>Fill in your information and download instantly</p>
+                        </div>
+                    </div>
+                    <button id="getStartedBtn" class="btn btn-large">Get Started</button>
+                </div>
+            </section>
+
+            <section id="authSection" class="auth-section" style="display:none;">
+                <div class="auth-container">
+                    <div id="loginForm" class="auth-form">
+                        <h2>Login</h2>
+                        <input type="email" id="loginEmail" placeholder="Email" required>
+                        <input type="password" id="loginPassword" placeholder="Password" required>
+                        <button class="btn btn-primary">Login</button>
+                        <p>Don't have an account? <a href="#" onclick="toggleAuth(event)">Sign up</a></p>
+                    </div>
+
+                    <div id="signupForm" class="auth-form" style="display:none;">
+                        <h2>Sign Up</h2>
+                        <input type="text" id="signupName" placeholder="Full Name" required>
+                        <input type="email" id="signupEmail" placeholder="Email" required>
+                        <input type="password" id="signupPassword" placeholder="Password" required>
+                        <input type="text" id="signupRole" placeholder="Current Role (Optional)">
+                        <button class="btn btn-primary">Sign Up</button>
+                        <p>Already have an account? <a href="#" onclick="toggleAuth(event)">Login</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="appSection" class="app-section" style="display:none;">
+                <div class="app-header">
+                    <h2>Welcome, <span id="userName">User</span>!</h2>
+                    <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+                </div>
+                <div class="app-content">
+                    <p>✅ Authenticated! Ready to build your resume.</p>
+                    <p>This is where your resume builder will be!</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 CVGenius. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
